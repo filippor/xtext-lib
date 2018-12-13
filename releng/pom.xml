@@ -41,17 +41,6 @@
 		</dependency>
 		<dependency>
 			<groupId>org.eclipse.xtend</groupId>
-			<artifactId>org.eclipse.xtend.lib.gwt</artifactId>
-			<version>2.18.0-SNAPSHOT</version>
-		</dependency>
-		<dependency>
-			<groupId>org.eclipse.xtend</groupId>
-			<artifactId>org.eclipse.xtend.lib.gwt</artifactId>
-			<version>2.18.0-SNAPSHOT</version>
-			<classifier>sources</classifier>
-		</dependency>
-		<dependency>
-			<groupId>org.eclipse.xtend</groupId>
 			<artifactId>org.eclipse.xtend.lib.macro</artifactId>
 			<version>2.18.0-SNAPSHOT</version>
 		</dependency>
@@ -69,17 +58,6 @@
 		<dependency>
 			<groupId>org.eclipse.xtext</groupId>
 			<artifactId>org.eclipse.xtext.xbase.lib</artifactId>
-			<version>2.18.0-SNAPSHOT</version>
-			<classifier>sources</classifier>
-		</dependency>
-		<dependency>
-			<groupId>org.eclipse.xtext</groupId>
-			<artifactId>org.eclipse.xtext.xbase.lib.gwt</artifactId>
-			<version>2.18.0-SNAPSHOT</version>
-		</dependency>
-		<dependency>
-			<groupId>org.eclipse.xtext</groupId>
-			<artifactId>org.eclipse.xtext.xbase.lib.gwt</artifactId>
 			<version>2.18.0-SNAPSHOT</version>
 			<classifier>sources</classifier>
 		</dependency>
@@ -90,8 +68,6 @@
 		<module>releng-target</module>
 		<module>p2</module>
 		<module>org.eclipse.xtext.xbase.lib</module>
-		<module>org.eclipse.xtext.gwt</module>
-		<module>org.eclipse.xtend.gwt</module>
 	</modules>
 
 	<build>
