@@ -1,6 +1,10 @@
 pipeline {
   agent any
 
+  parameters {
+    booleanParam(name: 'CANCEL_PREV_BUILD', defaultValue: true, description: 'Cancel previous running build')
+  }
+
   options {
     buildDiscarder(logRotator(numToKeepStr:'15'))
   }
@@ -16,7 +20,7 @@ pipeline {
   }
   
   stages {
-    stage('Checkout') {
+    stage('Initialize') {
       steps {
         checkout scm
       }
@@ -69,7 +73,7 @@ pipeline {
           color = '#FF0000'
         }
         
-        slackSend message: "${curResult}: <${env.BUILD_URL}|${env.JOB_NAME}#${env.BUILD_NUMBER}${envName}>", baseUrl: 'https://itemis.slack.com/services/hooks/jenkins-ci/', botUser: true, channel: 'xtext-builds', color: '#00FFFF', token: '1vbkhv8Hwlp3ausuFGj1BdJb'
+        // slackSend message: "${curResult}: <${env.BUILD_URL}|${env.JOB_NAME}#${env.BUILD_NUMBER}${envName}>", baseUrl: 'https://itemis.slack.com/services/hooks/jenkins-ci/', botUser: true, channel: 'xtext-builds', color: '#00FFFF', token: '1vbkhv8Hwlp3ausuFGj1BdJb'
       }
     }
   }
