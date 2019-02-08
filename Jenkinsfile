@@ -17,14 +17,6 @@ pipeline {
 			}
 		}
 
-		stage('Build Xtext BOM') {
-			steps {
-				dir('.m2/repository/org/eclipse/xtext') { deleteDir() }
-				dir('.m2/repository/org/eclipse/xtend') { deleteDir() }
-				sh 'sh ./1-install-bom.sh'
-			}
-		}
-
 		stage('Gradle Build') {
 			steps {
 				sh 'sh ./2-gradle-build.sh'
